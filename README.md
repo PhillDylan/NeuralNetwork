@@ -1,0 +1,1 @@
+Imagem do favicon.ico é do "Paul J." no qual foi pega no site "https://www.flaticon.com/br/icones-gratis/rede-neural"
