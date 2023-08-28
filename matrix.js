@@ -37,6 +37,7 @@ class Matrix{
      *     Matrix.add()
     */
 
+    // Função para aplicar uma função a cada elemento da matriz
     map(func){
         this.data = this.data.map((arr, i) => {
             return arr.map((num, j) => {
@@ -46,21 +47,14 @@ class Matrix{
         return this;
     }
 
+    // Função estática para somar duas matrizes A e B
     static add(A,B){
-        var matrix = new Matrix(A.rows,A.cols);
-        console.log(A.data);
-        console.log(B.data);
+        var matrix = new Matrix(A.rows,A.cols); // Cria uma nova matriz para armazenar o resultado da soma
+        console.log(A.data); // Exibe os dados da matriz A
+        console.log(B.data); // Exibe os dados da matriz B
         matrix.map((num, i ,j) => {
-            return A.data[i][j] + B.data[i][j]
+            return A.data[i][j] + B.data[i][j] // Calcula a soma dos elementos correspondentes das matrizes A e B
         });
-        console.log(matrix.data);
-
+        console.log(matrix.data); // Exibe os dados da matriz resultante
     }
-
-
-
-
-
-
-
 }
