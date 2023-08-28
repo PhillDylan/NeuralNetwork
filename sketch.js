@@ -6,10 +6,10 @@ function setup(){
     background(0);
 
     // Criando uma nova instância da classe Matrix com 3 linhas e 3 colunas
-    var m = new Matrix(3,3);
-    
-    // Exibindo a matriz no console
-    console.log(m)
+    var m1 = new Matrix(2,2);
+    var m2 = new Matrix(2,2);
+    Matrix.add(m1,m2)
+
 }
 
 // Função de desenho executada continuamente em um loop

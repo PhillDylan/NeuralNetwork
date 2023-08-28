@@ -24,4 +24,43 @@ class Matrix{
             this.data.push(arr);
         }
     }
+
+
+    /**
+     * Diferença de um static e de um nao static 
+     * no nao static eu chamaria assim
+     *    var m = new Matrix(3,3);
+     *      m.add()
+     * 
+     * e no static eu chamo assim  
+     *    var m = new Matrix(3,3);
+     *     Matrix.add()
+    */
+
+    map(func){
+        this.data = this.data.map((arr, i) => {
+            return arr.map((num, j) => {
+                return func(num,i,j);
+            });
+        });
+        return this;
+    }
+
+    static add(A,B){
+        var matrix = new Matrix(A.rows,A.cols);
+        console.log(A.data);
+        console.log(B.data);
+        matrix.map((num, i ,j) => {
+            return A.data[i][j] + B.data[i][j]
+        });
+        console.log(matrix.data);
+
+    }
+
+
+
+
+
+
+
 }
