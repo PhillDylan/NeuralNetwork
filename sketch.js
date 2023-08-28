@@ -6,9 +6,14 @@ function setup(){
     background(0);
 
     // Criando uma nova instância da classe Matrix com 3 linhas e 3 colunas
-    var m1 = new Matrix(2,2);
-    var m2 = new Matrix(2,2);
-    Matrix.add(m1,m2)
+    // var m1 = new Matrix(1,2);
+    // var m2 = new Matrix(2,1);
+
+    var nn = new RedeNeural(1,3,1);
+    var arr = [1,2];
+
+    nn.feedForward(arr);
+
 
 }
 
