@@ -1,3 +1,7 @@
+function sigmoid(x){
+    return 1/(1+Math.exp(-x));
+}
+
 class RedeNeural{
     constructor(i_nodes, h_nodes, o_nodes){
         this.i_nodes = i_nodes;
@@ -17,10 +21,20 @@ class RedeNeural{
     }
 
     feedForward(arr){
+        // INPUT -> HIDDEN
         let input = Matrix.arrayToMatrix(arr);
         let hidden = Matrix.multiply(this.weigths_ih, input)
         
         hidden = Matrix.add(hidden, this.bias_ih);
-        
+
+        hidden.map(sigmoid);
+
+        // HIDDEN -> OUTPUT
+
+        let output = Matrix.multiply(this.weigths_oh, hidden);
+        output = Matrix.add(output, this.bias_ho);
+        output.map(sigmoid);
+
+        output.print();
     }
 }

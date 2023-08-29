@@ -59,6 +59,16 @@ class Matrix{
         });
     }
 
+    static map(A,func){
+        let matrix = new Matrix(A.rows,B.rows)
+        this.data = matrix.data.map((arr, i) => {
+            return arr.map((num, j) => {
+                return func(num,i,j);
+            });
+        });
+        return matrix;
+    }
+
     // Função para aplicar uma função a cada elemento da matriz
     map(func){
         this.data = this.data.map((arr, i) => {

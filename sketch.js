@@ -9,7 +9,10 @@ function setup(){
     // var m1 = new Matrix(1,2);
     // var m2 = new Matrix(2,1);
 
-    var nn = new RedeNeural(1,3,1);
+    // RedeNeural(1,3,5)
+    // primeiro é a quantas entradas segundo quantas camadas escondidas e terceira quantas saidas
+
+    var nn = new RedeNeural(1,3,5);
     var arr = [1,2];
 
     nn.feedForward(arr);
